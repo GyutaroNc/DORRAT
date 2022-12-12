@@ -1143,7 +1143,7 @@ _16.Top Caja para Mascota_ *${userspet.indexOf(m.sender) + 1}* _de_ *${userspet.
 *│ ⛏️⚡ Minar EXP » ${new Date - user.lastmiming < 600000 ? '❌' : '✅'}*
 ${new Date - user.lastmiming < 600000 ? `${clockString(user.lastmiming + 600000 - new Date())}` : '*│* ✅ 𝗠𝗜𝗦𝗜𝗢𝗡 𝗬𝗔 𝗗𝗜𝗦𝗣𝗢𝗡𝗜𝗕𝗟𝗘'}
 *│┈┈┈┈┈┈┈┈┈┈┈┈*
-*│ ⛏️💲 Minar GataCoins » ${new Date - user.lastdorracoins < 600000 ? '❌' : '✅'}*
+*│ ⛏️💲 Minar DorratCoins » ${new Date - user.lastdorracoins < 600000 ? '❌' : '✅'}*
 ${new Date - user.lastcoins < 600000 ? `${clockString(user.lastcoins + 600000 - new Date())}` : '*│* ✅ 𝗠𝗜𝗦𝗜𝗢𝗡 𝗬𝗔 𝗗𝗜𝗦𝗣𝗢𝗡𝗜𝗕𝗟𝗘'}
 *│┈┈┈┈┈┈┈┈┈┈┈┈*
 *│ ⛏️💎 Minar Diamantes » ${new Date - user.lastdiamantes < 900000 ? '❌' : '✅'}* 

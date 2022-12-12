@@ -4,7 +4,7 @@ let user = global.db.data.users[m.sender]
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" 
 }
 let grupos = [md, yt]
-let gata = [imagen1, imagen4]
+let shark = [imagen1, imagen4]
 let dos = [md, yt]
 
 const items = {
@@ -260,7 +260,7 @@ return conn.sendButton(m.chat,
 [`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝚁𝙸𝙾`, `${usedPrefix}inventory`]
 ], fkontak, m)
 } else {
-if (user[item] < total) return conn.sendButton(m.chat, `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, `*No tienes suficiente ${global.rpgshop.emoticon(item)} para vender solo tienes ${user[item]} ${global.rpgshopp.emoticon(item)}*\n\n*You don't have enough ${global.rpgshop.emoticon(item)} to sell, you only have ${user[item]} ${global.rpgshopp.emoticon(item)}*`, gata.getRandom(), [[`🎒 𝙄𝙉𝙑𝙀𝙉𝙏𝘼𝙍𝙄𝙊 | 𝙄𝙉𝙑𝙀𝙉𝙏𝙊𝙍𝙔`, `${usedPrefix}inventory`], ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m)
+if (user[item] < total) return conn.sendButton(m.chat, `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, `*No tienes suficiente ${global.rpgshop.emoticon(item)} para vender solo tienes ${user[item]} ${global.rpgshopp.emoticon(item)}*\n\n*You don't have enough ${global.rpgshop.emoticon(item)} to sell, you only have ${user[item]} ${global.rpgshopp.emoticon(item)}*`, shark.getRandom(), [[`🎒 𝙄𝙉𝙑𝙀𝙉𝙏𝘼𝙍𝙄𝙊 | 𝙄𝙉𝙑𝙀𝙉𝙏𝙊𝙍𝙔`, `${usedPrefix}inventory`], ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m)
        
 let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
 user[item] -= total
