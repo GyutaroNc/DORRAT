@@ -38,14 +38,14 @@ let menuA = `
 *┃╭━━━━━━━━━━━━━━━━╾•*
 *┃┃  ❍ ${ucapan()} ❍*
 *┃┣━━━━━━━━━━━━━━━━╾•*
-*┃┃ ▢ 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 𝐃𝐄𝐋 𝐁𝐎𝐓:  ${creatorname}*
-*┃┃ ▢ 𝐍𝐔𝐌𝐄𝐑𝐎 𝐃𝐄𝐋 𝐂𝐑𝐄𝐀𝐃𝐎𝐑: wa.me/50582783643 (𝐍𝐎 𝐁𝐎𝐓)*
-*┃┃ ▢ 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 » ${vs}*
-*┃┃ ▢ 𝐅𝐄𝐂𝐇𝐀 » ${week}, ${date}*
-*┃┃ ▢ 𝐓𝐈𝐄𝐌𝐏𝐎 𝐀𝐂𝐓𝐈𝐕𝐎 » ${uptime}*
-*┃┃ ▢ 𝐋𝐈𝐁𝐑𝐀𝐑𝐘 » ${library}*
-*┃┃ ▢ 𝐋𝐄𝐍𝐆𝐔𝐀𝐉𝐄 » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
-*┃┃ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
+*┃┃ ▢ CREADOR DEL BOT:  ${creatorname}*
+*┃┃ ▢ NUMERO DEL CREADOR: wa.me/50582783643 (𝐍𝐎 𝐁𝐎𝐓)*
+*┃┃ ▢ VERSION » ${vs}*
+*┃┃ ▢ FECHA » ${week}, ${date}*
+*┃┃ ▢ TIEMPO ACTIVO » ${uptime}*
+*┃┃ ▢ LIBRERIA » ${library}*
+*┃┃ ▢ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
+*┃┃ ▢ USUARIOS » ${Object.keys(global.db.data.users).length}*
 *┃╰━━━━━━━━━━━━━━━━╾•*
 *╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓╾━━━╯*`.trim()
 
@@ -59,23 +59,23 @@ let menuB = `
 *╰══*═════════════ *✧*
 
 ┌──「📦𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍」─
-├➢_${usedPrefix}grupos_
-├➢_${usedPrefix}estado_
-├➢_${usedPrefix}terminos_
-├➢_${usedPrefix}instalarbot_
-├➢_${usedPrefix}infobot_
-├➢_${usedPrefix}grouplist_
-├➢_${usedPrefix}owner_
-├➢_${usedPrefix}script_
-├➢_Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+├➢ _${usedPrefix}grupos_
+├➢ _${usedPrefix}estado_
+├➢ _${usedPrefix}terminos_
+├➢ _${usedPrefix}instalarbot_
+├➢ _${usedPrefix}infobot_
+├➢ _${usedPrefix}grouplist_
+├➢ _${usedPrefix}owner_
+├➢ _${usedPrefix}script_
+├➢ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 └────ׂ─ׂ─ׂ─ׂ───
 
-┌──「❗𝐑𝐄𝐏𝐎𝐑𝐓𝐀𝐑-𝐂𝐎𝐌𝐀𝐍𝐃𝐎」─
-├➢*Reporta con este comando de haber*
-├➢*Fallas para poder Solucionar!!*
+┌──「❗ *REPORTAR COMANDO* 」─
+├➢ _*Reporta con este comando de haber*_
+├➢ _*Fallas para poder Solucionar!!*_
 ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-├➢_${usedPrefix}reporte *texto*_
-├➢_${usedPrefix}report *texto*_
+├➢ _${usedPrefix}reporte *texto*_
+├➢ _${usedPrefix}report *texto*_
 *└────ׂ─ׂ─ׂ─ׂ───*
 
 ┏━━━━━━━━━━━━━┓
@@ -528,10 +528,10 @@ let menuB = `
 ├➢_${usedPrefix}listprem_
 └────ׂ─ׂ─ׂ─ׂ───
  ━━━━━━━━━━━━━━━━━━━━━━━━━
-┃†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤† 𝐁𝐘 𝐄𝐥 𝐂𝐡𝐞𝐦𝐚 👹┃
+┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.donar', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
+await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.donar', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', fkontak, adReply)
 
 const sections = [
 {

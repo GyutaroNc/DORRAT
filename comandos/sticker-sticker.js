@@ -8,7 +8,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
   let username = conn.getName(m.sender)
   try {
-  	
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
@@ -21,7 +20,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       } catch (e) {
         console.error(e)
       } finally {
-      await conn.sendNyanCat(m.chat, global.wait, adnyancat, adsticker, null, script, m) 
+
+        await conn.sendNyanCat(m.chat, global.wait, imagen5, wm, null, md, m) 
         if (!stiker) {
           if (/webp/g.test(mime)) out = await webp2png(img)
           else if (/image/g.test(mime)) out = await uploadImage(img)

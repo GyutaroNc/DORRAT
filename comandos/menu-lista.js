@@ -5,7 +5,7 @@ import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let locale = 'es'
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+let taguser = await conn.getName(m.sender)
 let d = new Date(new Date + 3600000)
 let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
@@ -58,23 +58,23 @@ rows: [
 {title: lenguajeGB['smsLista21'](), rowId:`${usedPrefix}soloparaelpropietario`},  
 {title: lenguajeGB['smsLista22'](), rowId: `${usedPrefix}hornymenu`}
 ]},{	
-title: comienzo + '🗂️ 𝐄𝐍𝐀𝐁𝐋𝐄/𝐃𝐈𝐒𝐀𝐁𝐋𝐄 ' + fin,
+title: comienzo + '🗂️ ENABLE/DISABLE ' + fin,
 rows: [
-{title: "|🕋| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐌𝐄𝐍𝐔 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐎", rowId: `${usedPrefix}enable`},  
-{title: "|✨| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐖𝐄𝐋𝐂𝐎𝐌𝐄", rowId: `${usedPrefix}enable welcome`},
-{title: "|✨| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 ", rowId: `${usedPrefix}disable welcome`},
-{title: "|🔗| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊", rowId: `${usedPrefix}enable antilink`},  
-{title: "|🔗| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊", rowId: `${usedPrefix}disable antilink`},
-{title: "|🧬| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐀𝐑𝐀𝐁𝐄𝐒", rowId: `${usedPrefix}enable antiarabes`},    
-{title: "|🧬| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐀𝐑𝐀𝐁𝐄𝐒", rowId: `${usedPrefix}disable antiarabes`},
-{title: "|🥵| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐌𝐎𝐃𝐎𝐇𝐎𝐑𝐍𝐘", rowId: `${usedPrefix}enable modohorny`},
-{title: "|🥵| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐌𝐎𝐃𝐎𝐇𝐎𝐑𝐍𝐘", rowId: `${usedPrefix}disable modohorny`},
-{title: "|⛔| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐑𝐄𝐒𝐓𝐑𝐈𝐂𝐓", rowId: `${usedPrefix}enable restrict`},
-{title: "|⛔| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐑𝐄𝐒𝐓𝐑𝐈𝐂𝐓", rowId: `${usedPrefix}disable restrict`},
-{title: "|📵| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐋𝐋𝐀𝐌𝐀𝐃𝐀", rowId: `${usedPrefix}enable anticall`},
-{title: "|📵| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐋𝐋𝐀𝐌𝐀𝐃𝐀", rowId: `${usedPrefix}disable anticall`},   
-{title: "|🎵| 𝐄𝐍𝐀𝐁𝐋𝐄 𝐀𝐔𝐃𝐈𝐎𝐒", rowId: `${usedPrefix}enable audios`},
-{title: "|🎵| 𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐔𝐃𝐈𝐎𝐒", rowId: `${usedPrefix}disable audios`}
+{title: "│🕋│ENABLE MENU COMPLETO", rowId: `${usedPrefix}enable`},  
+{title: "│✨│ENABLE WELCOME", rowId: `${usedPrefix}enable welcome`},
+{title: "│✨│DISABLE WELCOME", rowId: `${usedPrefix}disable welcome`},
+{title: "│🔗│ENABLE ANTILINK", rowId: `${usedPrefix}enable antilink`},  
+{title: "│🔗│DISABLE ANTILINK", rowId: `${usedPrefix}disable antilink`},
+{title: "│🧬│ENABLE ANTIARABES", rowId: `${usedPrefix}enable antiarabes`},    
+{title: "│🧬│DISABLE ANTIARABES", rowId: `${usedPrefix}disable antiarabes`},
+{title: "│🥵│ENABLE MODOHORNY", rowId: `${usedPrefix}enable modohorny`},
+{title: "│🥵│DISABLE MODOHORNY", rowId: `${usedPrefix}disable modohorny`},
+{title: "│⛔│ENABLE RESTRICT", rowId: `${usedPrefix}enable restrict`},
+{title: "│⛔│DISABLE RESTRICT", rowId: `${usedPrefix}disable restrict`},
+{title: "│📵│ENABLE ANTILLAMADA", rowId: `${usedPrefix}enable anticall`},
+{title: "│📵│DISABLE ANTILLAMADA", rowId: `${usedPrefix}disable anticall`},   
+{title: "│🎵│ENABLE AUDIOS", rowId: `${usedPrefix}enable audios`},
+{title: "│🎵│DISABLE AUDIOS", rowId: `${usedPrefix}disable audios`}
 ]}]
 
 
@@ -90,27 +90,27 @@ const listMessage = {
 text: `
 ┏─────────────────────⬣\n│${ucapan()}\n│💚•.¸💚¸.• *${taguser}* •.¸💚¸.•💚\n┗───────────────────── ⳹
 
-╔═══〔 *${wm}* 〕═══⬣
-║ ⏱️ ▢ *Hora*    
-║ ⌚ ▢ ${time}   
-║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ ⚡ ▢ *Activo durante*
-║ ⚡ ▢ ${uptime}
-║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 💎 ▢ *Versión de 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓*
-║ 💎 ▢ ${vs}
-║ 🔳 ▢ Library:
-║ 🖥️ ▢ ${library}
-║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 👥 ▢ *Usuario(s)*
-║ 💫 ▢ ${Object.keys(global.db.data.users).length} 
-║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-╚══════════════════⬣`, footer: `*${lenguajeGB['smsPareja']()} ➢ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
+*╔═══*〔 *${wm}* 〕═══⬣
+*║ ⏱️ ▢ Hora:*
+*║ ⌚ ▢ ${time}*   
+*║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
+*║ ⚡ ▢ Tiempo activo:*
+*║ ⚡ ▢ ${uptime}*
+*║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
+*║ 💎 ▢ Versión del bot:*
+*║ 💎 ▢ ${vs}*
+*║ 🔳 ▢ Librería:*
+*║ 🖥️ ▢ ${library}*
+*║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
+*║ 👥 ▢ Usuario(s):*
+*║ 💫 ▢ ${Object.keys(global.db.data.users).length}*
+*║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
+*╚══════════════════⬣*`, footer: `*${lenguajeGB['smsPareja']()} ➢ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
 //${name} ${ucapan()}
 
 title: null,
 
-buttonText: "🔰 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗘 𝗔𝗤𝗨𝗜 🔰", 
+buttonText: "*selección | selection ✅*", 
 
 sections }
 
